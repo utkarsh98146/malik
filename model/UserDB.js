@@ -24,6 +24,10 @@ export const User = sequelize.define('UserDB', {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    phoneNumber: {
+        type: DataTypes.BIGINT,
+        allowNull: false,
+    },
     role: {
         type: DataTypes.ENUM('Admin', 'Client', 'Receiver', 'Editor'),
         allowNull: true,

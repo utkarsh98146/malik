@@ -51,7 +51,7 @@ async function dbConnection() {
         console.log(`✅ Sequelize connected to '${DB_NAME}' database.`);
         return sequelize;
     } catch (error) {
-        console.error("❌ Database connection failed:", error);
+        console.error("❌ Database connection failed:", error)
         process.exit(1); // Exit the process if connection fails
     }
 }

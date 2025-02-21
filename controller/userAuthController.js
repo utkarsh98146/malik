@@ -32,9 +32,9 @@ export const loginController = async (req, res) => {
 }
 
 export const signUpController = async (req, res) => {
-    const { name, email, password, role } = req.body
+    const { name, email, password, role, phoneNumber } = req.body
 
-    if (!name || !email || !password) {
+    if (!name || !email || !password || !phoneNumber) {
         return res.status(400).json({ message: 'Please fill all field are required', })
     }
     try {
@@ -50,6 +50,7 @@ export const signUpController = async (req, res) => {
             name: name,
             password: hashedPassword,
             email: email,
+            phoneNumber: phoneNumber,
             role: role
         })
 
